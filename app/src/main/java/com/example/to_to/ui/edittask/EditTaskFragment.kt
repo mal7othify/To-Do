@@ -29,13 +29,17 @@ class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {
             editTaskTitle.setText(viewModel.taskTitle)
             editTaskDescription.setText(viewModel.taskDescription)
             if (priority.checkedRadioButtonId != -1) {
-                when (priority.checkedRadioButtonId) {
-                    0 -> viewModel.taskPriority = 3
-                    1 -> viewModel.taskPriority = 2
-                    else -> viewModel.taskPriority = 1
+                when {
+                    rbHighPriority.isChecked -> {
+                        viewModel.taskPriority = 3
+                    }
+                    rbMediumPriority.isChecked -> {
+                        viewModel.taskPriority = 2
+                    }
+                    else -> {
+                        viewModel.taskPriority = 1
+                    }
                 }
-            } else {
-                viewModel.taskPriority = 1
             }
 
             editTaskTitle.addTextChangedListener {
@@ -45,11 +49,22 @@ class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {
                 viewModel.taskDescription = it.toString()
             }
             priority.setOnCheckedChangeListener { group, checkedId ->
-                viewModel.taskPriority = when (checkedId) {
-                    0 -> 3
-                    1 -> 2
-                    else -> 1
+                when {
+                    rbHighPriority.isChecked -> {
+                        viewModel.taskPriority = 3
+                    }
+                    rbMediumPriority.isChecked -> {
+                        viewModel.taskPriority = 2
+                    }
+                    else -> {
+                        viewModel.taskPriority = 1
+                    }
                 }
+            }
+            if (editTaskTitle.text.isBlank()) {
+                btnAdd.text = "Add"
+            } else {
+                btnAdd.text = "Edit"
             }
             btnAdd.setOnClickListener {
                 viewModel.onSaveClick()

@@ -10,5 +10,6 @@
     <string name="task_title">Task title</string>
     <string name="task_description">Task description</string>
     <string name="add">Add</string>
+    <string name="edit">Edit</string>
     <string name="priority">Priority</string>
 </resources>

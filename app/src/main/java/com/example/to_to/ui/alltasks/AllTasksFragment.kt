@@ -78,7 +78,7 @@ class AllTasksFragment : Fragment(R.layout.fragment_all_tasks), TasksAdapter.OnI
                         val action =
                             AllTasksFragmentDirections.actionAllTasksFragmentToEditTaskFragment(
                                 null,
-                                "New Task"
+                                "New Task",
                             )
                         findNavController().navigate(action)
                     }
