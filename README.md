@@ -1,7 +1,7 @@
 # To-Do Application
 This to-do app implements MVVM architecture using Hilt, Room, Coroutines and Navigation component.
 
-<img src="https://github.com/mal7othify/to-do/blob/master/ezgif-3-e5dcf289fbf7.gif" width="400">
+<img src="https://github.com/mal7othify/to-do/blob/master/ezgif-3-e5dcf289fbf7.gif" width="400" align="center">
 
 
 ## Included functions: 
