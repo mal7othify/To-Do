@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.edittask.EditTaskFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_title" />
+
+    <EditText
+        android:id="@+id/edit_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/task_title"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_description" />
+
+    <EditText
+        android:id="@+id/edit_task_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/task_description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:maxLines="16"
+        android:minLines="1"
+        android:paddingBottom="16dp"
+        android:textSize="14sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/priority" />
+
+    <RadioGroup
+        android:id="@+id/priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rb_high_priority"
+        android:divider="@color/purple_700"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:showDividers="middle">
+
+        <RadioButton
+            android:id="@+id/rb_high_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/purple_700"
+            android:drawableEnd="@drawable/ic_baseline_arrow_circle_up_24"
+            android:drawableTint="@color/red"
+            android:paddingEnd="16dp"
+            android:text="@string/high_priority" />
+
+        <RadioButton
+            android:id="@+id/rb_medium_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/purple_700"
+            android:drawableEnd="@drawable/ic_baseline_remove_circle_outline_24"
+            android:drawableTint="@color/yellow"
+            android:paddingEnd="16dp"
+            android:text="@string/medium_priority" />
+
+        <RadioButton
+            android:id="@+id/rb_low_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/purple_700"
+            android:drawableEnd="@drawable/ic_baseline_arrow_circle_down_24"
+            android:drawableTint="@color/green"
+            android:paddingEnd="16dp"
+            android:text="@string/low_priority" />
+    </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add" />
+
+</LinearLayout>

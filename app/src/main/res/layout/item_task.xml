@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <CheckBox
+        android:id="@+id/cb_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:buttonTint="@color/purple_700"/>
+
+    <TextView
+        android:id="@+id/tv_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/cb_done"
+        android:layout_alignBottom="@id/cb_done"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/iv_task_priority"
+        android:layout_toEndOf="@id/cb_done"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        tools:text="Make a to-do project" />
+
+    <ImageView
+        android:id="@+id/iv_task_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/high_priority"
+        android:src="@drawable/ic_baseline_arrow_circle_up_24"
+        app:tint="@color/red" />
+
+</RelativeLayout>
