@@ -13,8 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
         android:minWidth="0dp"
-        android:minHeight="0dp"
-        android:buttonTint="@color/purple_700"/>
+        android:minHeight="0dp"/>
 
     <TextView
         android:id="@+id/tv_task"
