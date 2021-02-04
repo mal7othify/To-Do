@@ -3,6 +3,8 @@ This to-do app implements MVVM architecture using Hilt, Room, Coroutines and Nav
 
 ![Application snapshot](https://github.com/mal7othify/to-do/blob/master/ezgif-3-e5dcf289fbf7.gif {width=40px height=400px}))
 
+<img src="https://github.com/mal7othify/to-do/blob/master/ezgif-3-e5dcf289fbf7.gif" width="200">
+
 
 ## Included functions: 
 * Show tasks with their corresponding priorities.
