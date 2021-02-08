@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.collect
 @AndroidEntryPoint
 class AllTasksFragment : Fragment(R.layout.fragment_all_tasks), TasksAdapter.OnItemClickListener {
 
+    private val TAG = "AllTasksFragment"
     val viewModel: TaskViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

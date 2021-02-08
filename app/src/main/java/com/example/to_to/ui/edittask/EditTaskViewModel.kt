@@ -17,7 +17,7 @@ import javax.inject.Inject
 @HiltViewModel
 class EditTaskViewModel @Inject constructor(
     private val taskDao: TaskDao,
-    @Assisted val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     val task = savedStateHandle.get<Task>("task")
     var taskTitle = savedStateHandle.get<String>("taskTitle") ?: task?.title ?: ""

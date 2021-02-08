@@ -19,6 +19,7 @@ import kotlinx.coroutines.flow.collect
 @AndroidEntryPoint
 class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {
 
+    private val TAG = "EditTaskFragment"
     private val viewModel: EditTaskViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
