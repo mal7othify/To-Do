@@ -1,7 +1,6 @@
 package com.example.to_to.ui.edittask
 
 import androidx.hilt.Assisted
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,11 +8,14 @@ import com.example.to_to.ADD_TASK_RESULT_OK
 import com.example.to_to.EDIT_TASK_RESULT_OK
 import com.example.to_to.data.Task
 import com.example.to_to.data.TaskDao
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class EditTaskViewModel @ViewModelInject constructor(
+@HiltViewModel
+class EditTaskViewModel @Inject constructor(
     private val taskDao: TaskDao,
     @Assisted val savedStateHandle: SavedStateHandle
 ) : ViewModel() {

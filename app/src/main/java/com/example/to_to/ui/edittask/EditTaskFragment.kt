@@ -28,18 +28,10 @@ class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {
         binding.apply {
             editTaskTitle.setText(viewModel.taskTitle)
             editTaskDescription.setText(viewModel.taskDescription)
-            if (priority.checkedRadioButtonId != -1) {
-                when {
-                    rbHighPriority.isChecked -> {
-                        viewModel.taskPriority = 3
-                    }
-                    rbMediumPriority.isChecked -> {
-                        viewModel.taskPriority = 2
-                    }
-                    else -> {
-                        viewModel.taskPriority = 1
-                    }
-                }
+            when (viewModel.taskPriority) {
+                3 -> priority.check(R.id.rb_high_priority)
+                2 -> priority.check(R.id.rb_medium_priority)
+                else -> priority.check(R.id.rb_low_priority)
             }
 
             editTaskTitle.addTextChangedListener {
@@ -58,6 +50,7 @@ class EditTaskFragment : Fragment(R.layout.fragment_edit_task) {
                     }
                     else -> {
                         viewModel.taskPriority = 1
+//                        priority.check(R.id.rb_low_priority)
                     }
                 }
             }

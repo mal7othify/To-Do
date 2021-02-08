@@ -1,6 +1,5 @@
 package com.example.to_to.ui.alltasks
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
@@ -8,11 +7,14 @@ import com.example.to_to.ADD_TASK_RESULT_OK
 import com.example.to_to.EDIT_TASK_RESULT_OK
 import com.example.to_to.data.Task
 import com.example.to_to.data.TaskDao
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TaskViewModel @ViewModelInject constructor(
+@HiltViewModel
+class TaskViewModel @Inject constructor(
     private val taskDao: TaskDao
 ) : ViewModel() {
 
